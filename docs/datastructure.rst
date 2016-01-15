@@ -424,16 +424,16 @@ In this example we will multiply two matrices. First we will take input the numb
 
 ::
 
-    #!/usr/bin/env python
-    n = int(raw_input("Enter the value of n: "))
+    #!/usr/bin/env python3
+    n = int(input("Enter the value of n: "))
     print("Enter values for the Matrix A")
     a = []
     for i in range(0, n):
-        a.append([int(x) for x in raw_input("").split(" ")])
+        a.append([int(x) for x in input("").split(" ")])
     print("Enter values for the Matrix B")
     b = []
     for i in range(0, n):
-        b.append([int(x) for x in raw_input("").split(" ")])
+        b.append([int(x) for x in input("").split(" ")])
     c = []
     for i in range(0, n):
         c.append([a[i][j] * b[j][i] for j in range(0,n)])
@@ -466,6 +466,6 @@ The output
        49    32     9 
     ------------------------------
 
-Here we have used list comprehensions couple of times. *[int(x) for x in raw_input("").split(" ")]* here first it takes the input as string by *raw_input()*, then split the result by " ", then for each value create one int. We are also using *[a[i][j] * b[j][i] for j in range(0,n)]* to get the resultant row in a single line.
+Here we have used list comprehensions couple of times. *[int(x) for x in input("").split(" ")]* here first it takes the input as string by *input()*, then split the result by " ", then for each value create one int. We are also using *[a[i][j] * b[j][i] for j in range(0,n)]* to get the resultant row in a single line.
 
 
